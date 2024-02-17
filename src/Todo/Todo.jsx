@@ -1,25 +1,27 @@
 import React, { useContext } from 'react'
 import './todo.css'
-import AddTask from '../Components/AddTask/AddTask'
-import Display from '../Components/Display/Display'
-import DisplayContext from '../Context/context'
+import Progress from '../Components/Footer/Progress/Progress'
+import Completed from '../Components/Footer/Completed/Completed'
+import History from '../Components/Footer/History/History'
 import Navbar from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer/Footer'
+import { Route, Routes } from 'react-router-dom'
 
 const Todo = () => {
-const {display} = useContext(DisplayContext)
   
   return (
     <>
     <div className="container">
-      <div className="todo-app">
-        <Navbar/>
-        <h2>To-Do List</h2>
-        <h4>{display.length} Todos</h4>
-
-        <AddTask/>
-        <Display/>
+      <div className="app">
+      <Navbar/>
+      <Routes>
+        <Route  path='/progress' element={<Progress/>}/>
+        <Route path='/completed' element={<Completed/>}/>
+        <Route path='/history' element={<History/>}/>
+      </Routes>
+      <Footer/>
       </div>
-        
+      
     </div>
     
 

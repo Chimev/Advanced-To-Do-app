@@ -1,17 +1,17 @@
 import React, { useState, useContext } from 'react'
 import Button from '../Button/Button'
-import DisplayContext from '../../Context/context'
+import DisplayContext from '../../Context/DisplayContext/context'
 
 
 
 
 const AddTask = () => {
     const [value, setValue] = useState('')
-    const{ display, setDisplay } = useContext(DisplayContext)
+    const{ task, setTask } = useContext(DisplayContext)
 
     const addItem = (value) => {
         // console.log(value)//value could have being anything it is the value props in input
-        setDisplay([...display, value])
+        setTask([...task, value])
         setValue("")
       }
   return (

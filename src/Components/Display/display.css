@@ -1,6 +1,7 @@
 .list{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .list h3{
     list-style: none;
