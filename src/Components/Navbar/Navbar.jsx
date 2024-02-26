@@ -1,17 +1,15 @@
 import React from 'react'
 import './Navbar.css'
 
-const Navbar = () => {
+const Navbar = ({text, log, name}) => {
   return (
     <nav>
         <div>
-            <h2>Hello Chime</h2>
+            <h2></h2>
         </div>
-        <ul>
-            <li>
-                logout
-            </li>
-        </ul>
+        <div className="button">
+        <button onClick={log}>{text}</button>
+        </div>
     </nav>
   )
 }

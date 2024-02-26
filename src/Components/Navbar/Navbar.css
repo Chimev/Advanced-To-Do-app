@@ -5,10 +5,3 @@ nav{
 ul{
     margin-top: 10px;
 }
-li{
-    list-style: none;
-    border: 2px solid #ff5945;
-    display: inline;
-    padding: 5px 12px;
-    margin-right: 6px;
-}
